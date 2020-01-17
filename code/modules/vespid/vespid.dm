@@ -26,11 +26,13 @@
 		icon_state = "mandible_explosive"
 		ammo_type = list(/obj/item/projectile/beam/laser/heavylaser)
 		desc = "A  semi-automatic coilgun made by Vespid Incorporated."
+		playsound(loc, "sparks", 75, 1, -1)
 	else
 		to_chat(user, "<span class ='warning'>The coils retract off the barrel with a silent hum.</span>")
 		icon_state = "mandible_shotgun"
 		ammo_type = list(/obj/item/ammo_casing/energy/laser/scatter)
 		desc = "A fully automatic shotgun made by Vespid Incorporated."
+		playsound(loc, "sparks", 75, 1, -1)
 
 /obj/item/vespidcoxa
 	name = "Coxa Melee Multitool"
@@ -61,11 +63,13 @@
 		icon_state = "coxa_stunprod"
 		throwforce = 5
 		force = 10
+		playsound(loc, "sparks", 75, 1, -1)
 	else
 		to_chat(user, "<span class ='warning'>The prongs retract, exposing the razor-sharp blade.</span>")
 		icon_state = "coxa_sword"
 		force = 40
 		throwforce = 150
+		playsound(loc, "sparks", 75, 1, -1)
 
 /obj/item/gun/energy/laser/vespid/tarsus
 	name = "Tarsus Self-Defense Weapon"
@@ -83,6 +87,7 @@
 		ammo_type = list(/obj/item/projectile/beam/laser)
 		desc = "A  full-auto coilgun that sacrifices damage and accuracy for dakka, made by Vespid Incorporated."
 		burst_size = 6
+		playsound(loc, "sparks", 75, 1, -1)
 	else
 		to_chat(user, "<span class ='warning'>You push the prongs back into the gun with a satisfying click.</span>")
 		desc = "A heavy coilgun shoved into a pistol case, made by Vespid Incorporated."
@@ -90,6 +95,7 @@
 		item_state = "caplaser"
 		burst_size = 2
 		ammo_type = list(/obj/item/projectile/beam/laser/heavylaser)
+		playsound(loc, "sparks", 75, 1, -1)
 
 /obj/machinery/vending/vespidvend
 	name = "Vespid Vend"
@@ -102,4 +108,4 @@
 					/obj/item/gun/energy/laser/vespid/tarsus = 4)
 	armor = list(melee = 100, bullet = 100, laser = 100, energy = 100, bomb = 0, bio = 0, rad = 0, fire = 100, acid = 50)
 	resistance_flags = FIRE_PROOF
-	product_ads = "Guaranteed Dimas Moment!; Buy or die!; Consume or be consumed!; Let none survive!; No refunds!"
+	product_ads = "Guaranteed Dimas Moment!; Buy or Die!; Consume or Be Consumed!; Let none survive!; No refunds!; Satisfies even the children!"
